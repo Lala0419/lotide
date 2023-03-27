@@ -6,10 +6,8 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+const words = [1,"hello","LHL","Yo Yo"];
 
-const head = function(arr){
- return arr[0]
-}
 
-assertEqual(head([5,6,7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
+//test case
+assertEqual(words.length,4);
