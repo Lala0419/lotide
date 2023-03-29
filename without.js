@@ -14,8 +14,9 @@ const without = function(source, itemsToRemove) {
 source = source.filter(item => !itemsToRemove.includes(item))
  console.log("source",source)
  console.log("remove", itemsToRemove)
-  // ** source.filter(item => item !== itemToRemove) did not work in this case. 
-  //** is is because itemsToRemove is an array and has multiple values? */
+   // source.filter(item => item !== itemToRemove) did not work in this case. 
+  //** is is because itemsToRemove is an array and has multiple values? */ <-- No
+  // A. it is not working because itmesToRemove is an array and you cannot compare with itwm which is a string or number) 
 
   return source
 }
