@@ -34,3 +34,6 @@ assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
 
 
 //gpt https://chat.openai.com/chat/6c0b3901-7b6d-4d45-bcd0-00d2b865c94a
+
+// Thought
+//Didn't know I cannot assign object.keys(obj) to a variable. obj at obj[item], I wasn't sure. [item] at obj[item], couldnt figure out why there can be no '' around item but it made sence since it is a reference and it is already quoted at the for of loop. ['aaa','bbb','ccc']
