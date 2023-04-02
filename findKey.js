@@ -1,89 +1,83 @@
 // FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🔥🔥🔥 Assertion Passed: [${actual}] === [${expected}]`);
-  } else {
-    console.log(`💤💤💤 Assertion Failed: [${actual}] !== [${expected}]`);
-  }
+const assertEqual = function (actual, expected) {
+	if (actual === expected) {
+		console.log(`🔥🔥🔥 Assertion Passed: [${actual}] === [${expected}]`);
+	} else {
+		console.log(`💤💤💤 Assertion Failed: [${actual}] !== [${expected}]`);
+	}
 };
 
-const findKey = function(ratings, cb) {
-  // let result = []
-  for(let key of Object.keys(ratings)) {
-    // result.push(obj[key][stars])
-    // console.log('Object.keys(obj)', Object.keys(obj))
-    let star = ratings[key]
-    console.log('star',star)
-    if(cb(star)){
-      return key
-    }
-  } 
-  return undefined
-}
+const findKey = function (ratings, cb) {
+	// let result = []
+	for (let key of Object.keys(ratings)) {
+		// result.push(obj[key][stars])
+		// console.log('Object.keys(obj)', Object.keys(obj))
+		let star = ratings[key];
+		console.log("star", star);
+		if (cb(star)) {
+			return key;
+		}
+	}
+	return undefined;
+};
 
 //from chatGPT
 // function findKey(obj, callback) {
 //   for (let key in obj) {
 //     console.log('obj[key]',obj[key])
-//     if (callback(obj[key])){ //true 
+//     if (callback(obj[key])){ //true
 //     /**  callback({stars: 1}){
 //         x => x.stars === 2
 //      x => {stars: 1}.stars
 //      } --> guessing^^ but Doesn't make sence..?
 //     */
-//       console.log('callback(obj[key])',callback(obj[key])) //true/false but how?? 
+//       console.log('callback(obj[key])',callback(obj[key])) //true/false but how??
 //       return key;
 //     }
 //   }
 //   return undefined;
 // }
 
-
 const restaurantRatings = {
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      
-  { 
-    stars: 2 
-  },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
+	"Blue Hill": { stars: 1 },
+	Akaleri: { stars: 3 },
+	noma: {
+		stars: 2,
+	},
+	elBulli: { stars: 3 },
+	Ora: { stars: 2 },
+	Akelarre: { stars: 3 },
 };
 
-restaurantRatings.noma
+restaurantRatings.noma;
 // const test = function(){
 //   return [ 'Blue Hill', 'Akaleri', 'noma', 'elBulli', 'Ora', 'Akelarre' ].find(x => x.stars === 2)
 //***  ^^ NO it is actually {stars: 1},{stars: 3},{stars: 2},{stars: 3},{stars: 2} or {stars: 3} */
 
 // console.log(test)
 
-const result1 = findKey(restaurantRatings, x => x.stars === 2) // => "noma"
+const result1 = findKey(restaurantRatings, (x) => x.stars === 2); // => "noma"
 // x => x.stars === 2
 //{ stars: 1 } => { stars: 1 }.stars === 2
-x = { stars: 1 }
-restaurantRatings.noma.stars === 2
-restaurantRatings.noma === { stars: 2 }
-// { stars: 2 }.stars === 2  --> this complains and thats why you have to use reference. 
-x.stars === 2
+x = { stars: 1 };
+restaurantRatings.noma.stars === 2;
+restaurantRatings.noma === { stars: 2 };
+// { stars: 2 }.stars === 2  --> this complains and thats why you have to use reference.
+x.stars === 2;
 
 /**
- * I GOT IT!!!!! after talking to Duy, I see why it (x => x.stars === 2) works. I've only seen obj that assined to a valiable. So when I try to access a value, I use the valiable name and the key that paired with the value you want to access to. 
+ * I GOT IT!!!!! after talking to Duy, I see why it (x => x.stars === 2) works. I've only seen obj that assined to a valiable. So when I try to access a value, I use the valiable name and the key that paired with the value you want to access to.
  * because this {stars: 1} obj doesnt have a variable name, it looked weired at first, but if you stair long enough, you see x is just referencing the entire obj and stars as it is the key name, of course accessing the value. April 1st
  */
 
-const result2 = findKey(restaurantRatings, x => x.stars === 3) // => "Akaleri"
+const result2 = findKey(restaurantRatings, (x) => x.stars === 3); // => "Akaleri"
 
-const result3 = findKey(restaurantRatings, x => x.stars === 1) // => "Blue Hill"
-
-
-
+const result3 = findKey(restaurantRatings, (x) => x.stars === 1); // => "Blue Hill"
 
 // TEST CODE
-assertEqual(result1, 'noma');
-assertEqual(result2, 'Akaleri');
-assertEqual(result3, 'Blue Hill');
-
+assertEqual(result1, "noma");
+assertEqual(result2, "Akaleri");
+assertEqual(result3, "Blue Hill");
 
 /**
  * wow wow wow it took me almost 5 hours.. 
