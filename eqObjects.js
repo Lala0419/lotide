@@ -1,3 +1,5 @@
+//COME BACK WHEN YOU HAVE MORE TIME
+
 // FUNCTION IMPLEMENTATION
 const assertEqual = function (actual, expected) {
 	if (actual === expected) {
@@ -68,3 +70,6 @@ assertEqual(
 ); // => false
 
 //?? Not handring the array well. so the line 42, 43 is false and undefined/
+
+module.exports = eqObjects; // just exporting one thing
+//module.export = { eqObjects };
