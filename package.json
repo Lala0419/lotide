@@ -1,7 +1,7 @@
 {
-	"name": "lotide",
+	"name": "@lala0419/lotide",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Assertions for many uses",
 	"main": "main.js",
 	"scripts": {
 		"test": "./node_modules/mocha/bin/mocha"
@@ -10,7 +10,7 @@
 		"type": "git",
 		"url": "git+https://github.com/Lala0419/lotide.git"
 	},
-	"author": "",
+	"author": "Nanaya Miki <nanayamiki@gmail.com> (https://drive.google.com/file/d/1ku5j8J3FnAixQXvhpCNqiHYeSGYBZhDb/view?usp=share_link)",
 	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/Lala0419/lotide/issues"
