@@ -3,7 +3,7 @@ const assertEqual = require("./assertEqual");
 
 const countLetters = function (str) {
 	let result = {};
-	for (let letter of str) {
+	for (const letter of str) {
 		if (letter !== " ") {
 			if (result[letter]) {
 				result[letter] += 1;

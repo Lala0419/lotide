@@ -2,7 +2,7 @@ const assertEqual = require("./assertEqual");
 
 const findKey = function (ratings, cb) {
 	// let result = []
-	for (let key of Object.keys(ratings)) {
+	for (const key of Object.keys(ratings)) {
 		// result.push(obj[key][stars])
 		// console.log('Object.keys(obj)', Object.keys(obj))
 		let star = ratings[key];

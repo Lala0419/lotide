@@ -23,7 +23,7 @@ const eqObjects = function (object1, object2) {
 	if (Object.keys(object1).length !== Object.keys(object2).length) {
 		return false;
 	}
-	for (let key of Object.keys(object1)) {
+	for (const key of Object.keys(object1)) {
 		// console.log('key',key)
 		if (object2.hasOwnProperty(key) === false) {
 			//checking if they have the same key

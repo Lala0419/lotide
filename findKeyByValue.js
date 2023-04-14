@@ -10,7 +10,7 @@ const bestTVShowsByGenre = {
 
 const findKeyByValue = function (obj, value) {
 	//const ganre = Object.keys(obj) //--> You cannot assin to a variable. It will return ganre[item] = undefined
-	for (let key of Object.keys(obj)) {
+	for (const key of Object.keys(obj)) {
 		//console.log('item', item)
 		//console.log('obj', obj)
 		//console.log('obj[item]', obj[item]) //?? doesnt this obj[item] needs to be obj['item']?? ---> A(?) It is because item is a reference from the for og loop and it is already a string..?
