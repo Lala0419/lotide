@@ -1,17 +1,9 @@
 //COME BACK WHEN YOU HAVE MORE TIME
 
 // FUNCTION IMPLEMENTATION
-const assertEqual = function (actual, expected) {
-	if (actual === expected) {
-		console.log(`🔥🔥🔥 Assertion Passed: [${actual}] === [${expected}]`);
-	} else {
-		console.log(`💤💤💤 Assertion Failed: [${actual}] !== [${expected}]`);
-	}
-};
+const assertEqual = require("./assertEqual");
 
-const eqArrays = function (a, b) {
-	return JSON.stringify(a) === JSON.stringify(b);
-};
+const eqArrays = require("./eqArrays");
 
 const shirtObject = { color: "red", size: "medium" };
 const anotherShirtObject = { size: "medium", color: "red" };

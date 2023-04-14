@@ -1,12 +1,5 @@
 // FUNCTION IMPLEMENTATION
-const eqArrays = function (a, b) {
-	let result = JSON.stringify(a) === JSON.stringify(b);
-	if (result) {
-		console.log(`🔥🔥🔥 Assertion Passed: [${a}] === [${b}]`);
-	} else {
-		console.log(`💤💤💤 Assertion Failed: [${a}] !== [${b}]`);
-	}
-};
+const eqArrays = require("./eqArrays");
 
 const takeUntil = function (array, callback) {
 	let result = [];
@@ -46,3 +39,5 @@ eqArrays(results1, [1, 2, 5, 7, 2]);
 
 //splice resource
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+
+module.exports = takeUntil;

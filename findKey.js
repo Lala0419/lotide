@@ -1,11 +1,4 @@
-// FUNCTION IMPLEMENTATION
-const assertEqual = function (actual, expected) {
-	if (actual === expected) {
-		console.log(`🔥🔥🔥 Assertion Passed: [${actual}] === [${expected}]`);
-	} else {
-		console.log(`💤💤💤 Assertion Failed: [${actual}] !== [${expected}]`);
-	}
-};
+const assertEqual = require("./assertEqual");
 
 const findKey = function (ratings, cb) {
 	// let result = []
@@ -93,3 +86,5 @@ assertEqual(result3, "Blue Hill");
     link for more detail
     https://chat.openai.com/chat/b257c91e-c590-4c53-a560-3cabb6f5a141
  */
+
+module.exports = findKey;
