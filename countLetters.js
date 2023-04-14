@@ -1,4 +1,3 @@
-// FUNCTION IMPLEMENTATION
 const assertEqual = require("./assertEqual");
 
 const countLetters = function (str) {
@@ -12,13 +11,11 @@ const countLetters = function (str) {
 			}
 		}
 	}
-	console.log("result", result);
 	return result;
 };
 
 const func = countLetters("lighthouse in the house");
 
-// TEST CODE
 assertEqual(func["l"], 1);
 assertEqual(func["h"], 4);
 assertEqual(func["e"], 3);

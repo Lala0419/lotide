@@ -1,6 +1,3 @@
-//COME BACK WHEN YOU HAVE MORE TIME
-
-// FUNCTION IMPLEMENTATION
 const assertEqual = require("./assertEqual");
 
 const eqArrays = require("./eqArrays");
@@ -24,9 +21,7 @@ const eqObjects = function (object1, object2) {
 		return false;
 	}
 	for (const key of Object.keys(object1)) {
-		// console.log('key',key)
 		if (object2.hasOwnProperty(key) === false) {
-			//checking if they have the same key
 			return false;
 		} else {
 			// object1[key] === colors: ["red", "blue"]
@@ -48,20 +43,14 @@ const eqObjects = function (object1, object2) {
 	}
 };
 
-//  eqObjects(shirtObject , anotherShirtObject); // => true
-console.log(eqObjects(multiColorShirtObject, anotherMultiColorShirtObject));
-// TEST CODE
 assertEqual(eqObjects(shirtObject, anotherShirtObject), true);
 assertEqual(
 	eqObjects(multiColorShirtObject, anotherMultiColorShirtObject),
 	true
-); // => true
+);
 assertEqual(
 	eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject),
 	false
-); // => false
+);
 
-//?? Not handring the array well. so the line 42, 43 is false and undefined/
-
-module.exports = eqObjects; // just exporting one thing
-//module.export = { eqObjects };
+module.exports = eqObjects;
