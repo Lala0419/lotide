@@ -1,5 +1,5 @@
 const tails = function (arr) {
-	let length = arr.length;
+	const length = arr.length;
 	return length;
 };
 

@@ -1,5 +1,5 @@
 const middle = function (arr) {
-	let length = arr.length;
+	const length = arr.length;
 	if (length < 3) {
 		return [];
 	} else if (length % 2 === 1) {

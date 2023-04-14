@@ -2,7 +2,7 @@ const eqArrays = require("./eqArrays");
 
 const takeUntil = function (array, callback) {
 	let result = [];
-	for (let item of array) {
+	for (const item of array) {
 		result.push(item);
 		if (result.find(callback)) {
 			result.splice(-1, 1);

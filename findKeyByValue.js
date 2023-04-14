@@ -1,6 +1,5 @@
 const assertEqual = require("./assertEqual");
 
-// TEST CODE
 const bestTVShowsByGenre = {
 	sci_fi: "The Expanse",
 	comedy: "Brooklyn Nine-Nine",

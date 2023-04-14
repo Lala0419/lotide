@@ -26,7 +26,6 @@ const result1 = findKey(restaurantRatings, (x) => x.stars === 2);
 const result2 = findKey(restaurantRatings, (x) => x.stars === 3); // => "Akaleri"
 const result3 = findKey(restaurantRatings, (x) => x.stars === 1); // => "Blue Hill"
 
-// TEST CODE
 assertEqual(result1, "noma");
 assertEqual(result2, "Akaleri");
 assertEqual(result3, "Blue Hill");
