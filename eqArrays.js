@@ -8,8 +8,8 @@ const eqArrays = function (a, b) {
 			if (!isEqual) {
 				return false;
 			}
-		} else {
-			return JSON.stringify(a) === JSON.stringify(b);
+		} else if (a[i] !== b[i]) {
+			return false;
 		}
 	}
 	return true;
