@@ -2,7 +2,7 @@
 	"name": "@lala0419/lotide",
 	"version": "1.0.0",
 	"description": "Assertions for many uses",
-	"main": "inedx.js",
+	"main": "index.js",
 	"scripts": {
 		"test": "./node_modules/mocha/bin/mocha"
 	},

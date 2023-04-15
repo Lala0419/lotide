@@ -15,7 +15,4 @@ const eqArrays = function (a, b) {
 	return true;
 };
 
-// How to comapare two arrays
-// https://www.freecodecamp.org/news/how-to-compare-arrays-in-javascript/
-
 module.exports = eqArrays;
