@@ -26,10 +26,6 @@ This project was created and published by me as part of my learnings at Lighthou
 
 The following functions are currently implemented:
 
-- `function1(...)`: description
-- `function2(...)`: description
-- `function3(...)`: description
-
 - `assertEqual()`: A function that takes in 2 values and returns true if they are equal and false otherwise.
 - `head()`: A function that takes in an array and returns the first element in the array.
 - `tail()`: A function that takes in an array and returns everything except the first element of the array.
