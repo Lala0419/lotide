@@ -1,6 +1,6 @@
 {
 	"name": "@lala0419/lotide",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Assertions for many uses",
 	"main": "index.js",
 	"scripts": {

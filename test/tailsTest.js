@@ -1,8 +1,12 @@
 const assert = require("chai").assert;
-const tails = require("../tail");
+const tail = require("../tail");
 
 describe("tails", () => {
 	it("returns 4", () => {
-		assert.deepEqual(tails([1, "hello", "LHL", "Yo Yo"]), 4);
+		assert.deepEqual(tail([1, "hello", "LHL", "Yo Yo"]), [
+			"hello",
+			"LHL",
+			"Yo Yo",
+		]);
 	});
 });

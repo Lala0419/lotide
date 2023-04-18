@@ -1,8 +1,9 @@
-const tails = function (arr) {
-	const length = arr.length;
-	return length;
+const tail = function (arr) {
+	const result = arr.slice(1);
+
+	return result;
 };
 
-tails(["ggg", "ppp", "2", 1]);
+tail(["ggg", "ppp", "2", 1]);
 
-module.exports = tails;
+module.exports = tail;
