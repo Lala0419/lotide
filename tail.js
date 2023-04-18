@@ -4,6 +4,4 @@ const tail = function (arr) {
 	return result;
 };
 
-tail(["ggg", "ppp", "2", 1]);
-
 module.exports = tail;
